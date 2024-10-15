@@ -1,0 +1,129 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    android:background="@color/background_color">
+
+    <!-- Titre -->
+    <TextView
+        android:id="@+id/budgetFragmentTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Budget et Fréquence de Consommation"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Question: Quel est votre budget moyen pour une boisson ? -->
+    <TextView
+        android:id="@+id/questionTextBudget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="Quel est votre budget moyen pour une boisson ?"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupBudget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/radioBudgetLessThan5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Moins de 5€" />
+
+        <RadioButton
+            android:id="@+id/radioBudgetBetween5And8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Entre 5 et 8€" />
+
+        <RadioButton
+            android:id="@+id/radioBudgetMoreThan8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Plus de 8€" />
+    </RadioGroup>
+
+    <!-- Question: Quelle est votre fréquence de consommation de Bubble Tea ? -->
+    <TextView
+        android:id="@+id/questionTextFrequency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quelle est votre fréquence de consommation de Bubble Tea ?"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="24dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupFrequency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/radioFirstTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Première fois" />
+
+        <RadioButton
+            android:id="@+id/radioOccasional"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Occasionnel" />
+
+        <RadioButton
+            android:id="@+id/radioRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Régulier" />
+    </RadioGroup>
+
+    <!-- Question: Quel est votre budget maximal pour un topping supplémentaire ? -->
+    <TextView
+        android:id="@+id/questionTextToppingBudget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="Quel est votre budget maximal pour un topping supplémentaire ?"
+        android:textSize="18sp"
+        android:layout_marginTop="24dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupToppingBudget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/radioToppingBudget50cents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0,50 €" />
+
+        <RadioButton
+            android:id="@+id/radioToppingBudget1euro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 €" />
+
+        <RadioButton
+            android:id="@+id/radioToppingBudgetNoLimit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Peu importe" />
+    </RadioGroup>
+</LinearLayout>

@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    android:background="@color/background_color">
+
+    <!-- Titre de la section -->
+    <TextView
+        android:id="@+id/fruitPreferencesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Préférences de saveurs et textures"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Question : Aimez-vous les saveurs fruitées ? -->
+    <TextView
+        android:id="@+id/questionTextFruit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="Quel fruit préférez-vous ?"
+        android:textSize="18sp" />
+
+
+    <!-- Question : Préférez-vous des boissons fruitées ou crémeuses ? -->
+    <Spinner
+        android:id="@+id/spinnerFruit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center" />
+
+
+    <TextView
+        android:id="@+id/questionTextTexture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Préférez-vous des boissons fruitées ou crémeuses ?"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupTexture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/radioTextureFruity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fruitées" />
+
+        <RadioButton
+            android:id="@+id/radioTextureCreamy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crémeuses" />
+    </RadioGroup>
+
+</LinearLayout>

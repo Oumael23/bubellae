@@ -1,0 +1,129 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    android:background="@color/background_color">
+
+    <!-- Texture Preference Section -->
+    <TextView
+        android:id="@+id/texturePreferencesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Préférence de texture"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/questionTextTexture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="Quelles textures préférez-vous dans vos boissons ? (choisissez plusieurs si nécessaire)"
+        android:textSize="18sp" />
+
+    <!-- Choix multiples avec CheckBox -->
+    <CheckBox
+        android:id="@+id/checkGelatinous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Gélatineuse (perles de tapioca)" />
+
+    <CheckBox
+        android:id="@+id/checkCrunchy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Croquante (pépites de fruit, jelly)" />
+
+    <CheckBox
+        android:id="@+id/checkCreamy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Crémeuse (smoothie, mousse)" />
+
+    <CheckBox
+        android:id="@+id/checkLiquid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Liquide (boissons classiques sans topping)" />
+
+    <TextView
+        android:id="@+id/questionTextToppingsQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quelle quantité de perles ou autres toppings préférez-vous ?"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupToppingsQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/radioNoToppings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pas du tout" />
+
+        <RadioButton
+            android:id="@+id/radioFewToppings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Peu" />
+
+        <RadioButton
+            android:id="@+id/radioMediumToppings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Moyen" />
+
+        <RadioButton
+            android:id="@+id/radioManyToppings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beaucoup" />
+    </RadioGroup>
+
+    <!-- Toppings Sweetness Section -->
+    <TextView
+        android:id="@+id/questionTextToppingsSweetness"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Préférez-vous des toppings sucrés ou neutres ?"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupToppingsSweetness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/radioSweetToppings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sucrés" />
+
+        <RadioButton
+            android:id="@+id/radioNeutralToppings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Neutres" />
+    </RadioGroup>
+
+</LinearLayout>

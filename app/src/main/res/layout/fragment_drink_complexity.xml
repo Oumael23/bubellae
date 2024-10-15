@@ -1,0 +1,115 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    android:background="@color/background_color">
+
+    <TextView
+        android:id="@+id/drinkComplexityFragmentTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Complexité et Audace de la Boisson"
+        android:textSize="26sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center"/>
+
+    <!-- Question: Préférez-vous une boisson simple ou complexe ? -->
+    <TextView
+        android:id="@+id/complexityTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Préférez-vous une boisson simple ou complexe ?"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupComplexity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/radioSimple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simple" />
+
+        <RadioButton
+            android:id="@+id/radioComplex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complexe" />
+    </RadioGroup>
+
+    <!-- Question: Quel est votre niveau d'audace dans vos choix de boissons ? -->
+    <TextView
+        android:id="@+id/boldnessTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quel est votre niveau d'audace dans vos choix de boissons ?"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupBoldness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/radioClassic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Classique" />
+
+        <RadioButton
+            android:id="@+id/radioInnovative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Innovant" />
+    </RadioGroup>
+
+    <!-- Question: Préférez-vous tester une nouvelle recette ou rester sur vos classiques ? -->
+    <TextView
+        android:id="@+id/recipePreferenceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Préférez-vous tester une nouvelle recette ou rester sur vos classiques ?"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupRecipePreference"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/radioNewRecipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nouvelle recette" />
+
+        <RadioButton
+            android:id="@+id/radioClassicRecipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Classique" />
+    </RadioGroup>
+
+</LinearLayout>

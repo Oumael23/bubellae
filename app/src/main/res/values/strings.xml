@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Bubellea</string>
+    <string-array name="fruit_options">
+        <item>Sélectionnez un fruit</item> <!-- Première option par défaut -->
+        <item>Mangue</item>
+        <item>Fraise</item>
+        <item>Litchi</item>
+        <item>Pomme</item>
+        <item>Citron</item>
+    </string-array>
+</resources>

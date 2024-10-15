@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@color/background_color">
+
+    <!-- Message de bienvenue personnalisé -->
+    <TextView
+        android:id="@+id/greetingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bonjour !"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Texte expliquant l'objectif du formulaire -->
+    <TextView
+        android:id="@+id/objectiveTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Objectif du formulaire"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Button pour commencer le formulaire -->
+    <Button
+        android:id="@+id/startFormButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Commencer le formulaire" />
+
+</LinearLayout>
