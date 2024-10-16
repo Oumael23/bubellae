@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private Button continueButton;
     private Button menuButton;
     private ImageView menuImageView;
+    private ImageView logoImageView;
 
     private Switch languageSwitch;
     private TextView currentLanguageTextView;
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         menuImageView = findViewById(R.id.menuImageView);
+        logoImageView = findViewById(R.id.logoImageView);
         firstNameEditText = findViewById(R.id.firstNameEditText);
         continueButton = findViewById(R.id.continueButton);
         menuButton = findViewById(R.id.menuButton);
@@ -83,7 +85,13 @@ public class MainActivity extends AppCompatActivity {
         menuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                menuButton.setVisibility(View.VISIBLE);
+                menuImageView.setVisibility(View.VISIBLE);
+                firstNameEditText.setVisibility(View.GONE);
+                continueButton.setVisibility(View.GONE);
+                menuButton.setVisibility(View.GONE);
+                languageSwitch.setVisibility(View.GONE);
+                logoImageView.setVisibility(View.GONE);
+                currentLanguageTextView.setVisibility(View.GONE);
                 // URL de l'image
                 String imageUrl = "https://postimg.cc/vczCptHM";
 
