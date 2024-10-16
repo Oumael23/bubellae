@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -10,41 +11,38 @@
         android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Allergies alimentaires"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_marginBottom="24dp" />
+        android:text="@string/allergies_title"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    android:gravity="center"
+    android:layout_marginBottom="24dp" />
 
-    <!-- Allergies Question -->
     <TextView
         android:id="@+id/allergiesTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Veuillez indiquer vos allergies alimentaires (si aucune, laissez vide) :"
-        android:textSize="16sp"
-        android:gravity="center"
-        android:textStyle="bold" />
+        android:text="@string/allergies_instruction"
+    android:textSize="16sp"
+    android:gravity="center"
+    android:textStyle="bold" />
 
-    <!-- Additional Allergy Information -->
     <EditText
         android:id="@+id/editTextAllergies"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Si oui, à quoi êtes-vous allergique ?"
-        android:layout_marginTop="18sp"
-        android:inputType="text" />
+        android:hint="@string/allergies_hint"
+    android:layout_marginTop="18sp"
+    android:inputType="text" />
 
-    <!-- Food Restrictions Question -->
     <TextView
         android:id="@+id/restrictionsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Avez-vous des restrictions alimentaires spécifiques ?"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_marginTop="24dp" />
+        android:text="@string/restrictions_question"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    android:gravity="center"
+    android:layout_marginTop="24dp" />
 
     <RadioGroup
         android:id="@+id/radioGroupRestrictions"
@@ -59,13 +57,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Oui" />
+            android:text="@string/yes" />
 
         <RadioButton
             android:id="@+id/radioNoRestrictions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Non" />
+            android:text="@string/no" />
     </RadioGroup>
 
 </LinearLayout>

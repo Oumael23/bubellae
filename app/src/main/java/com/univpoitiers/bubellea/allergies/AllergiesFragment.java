@@ -58,13 +58,13 @@ public class AllergiesFragment extends Fragment {
         int selectedRestrictionId = radioGroupRestrictions.getCheckedRadioButtonId();
         if (selectedRestrictionId != -1) {
             String selectedTea = ((TextView) radioGroupRestrictions.findViewById(selectedRestrictionId)).getText().toString();
-            selectedPreferences.append("Restriction sélectionnée : ").append(selectedTea).append("<br>");
+            selectedPreferences.append(getString(R.string.restriction)).append(getString(R.string.selected)).append(selectedTea).append("<br>");
         }
 
         // Obtenir les allergies saisies
         String allergies = editTextAllergies.getText().toString().trim();
         if (!TextUtils.isEmpty(allergies)) {
-            selectedPreferences.append("Allergies mentionnées : ").append(allergies).append("<br>");
+            selectedPreferences.append(getString(R.string.allergies)).append(getString(R.string.selected)).append(allergies).append("<br>");
         }
 
         return selectedPreferences.toString();

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="previous">Précédent</string>
+    <string name="next">Suivant</string>
+    <string name="result">Résultat</string>
+    <string name="toast_all_questions">Veuillez répondre à toutes les questions.</string>
+    <string-array name="fruit_options">
+        <item>Sélectionnez un fruit</item> <!-- Première option par défaut -->
+        <item>Mangue</item>
+        <item>Fraise</item>
+        <item>Litchi</item>
+        <item>Pomme</item>
+        <item>Citron</item>
+    </string-array>
+    <string name="greeting_text">Bonjour !</string>
+    <string name="form_objective">Bienvenue dans notre formulaire personnalisé. Ce questionnaire nous permettra de mieux comprendre vos préférences pour vous offrir la boisson parfaite. Prenez le temps de répondre à chaque question pour que nous puissions vous offrir une expérience unique !</string>
+    <string name="start_form">Commencer le formulaire</string>
+    <string name="visit_menu_button">Visiter notre menu</string>
+    <string name="enter_first_name">Entrez votre prénom</string>
+    <string name="continue_button">Continuer</string>
+    <string name="error_empty_name">Veuillez entrer votre prénom</string>
+
+    <!-- Ajout de nouvelles chaînes pour ResultActivity -->
+    <string name="results_title">Résultats</string>
+    <string name="save_results">Sauvegarder le résultat</string>
+    <string name="quit_button">Quitter</string>
+    <string name="no_results">Aucun résultat</string>
+    <string name="results_saved_success">Résultats sauvegardés avec succès dans le dossier Download !</string>
+    <string name="results_save_error">Erreur lors de la sauvegarde des résultats.</string>
+
+    <string name="allergies_title">Allergies alimentaires</string>
+    <string name="allergies_instruction">Veuillez indiquer vos allergies alimentaires (si aucune, laissez vide) :</string>
+    <string name="allergies_hint">Si oui, à quoi êtes-vous allergique ?</string>
+    <string name="restrictions_question">Avez-vous des restrictions alimentaires spécifiques ?</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+
+    <string name="title_budget">Budget et Fréquence de Consommation</string>
+    <string name="budget_question">Quel est votre budget moyen pour une boisson ?</string>
+    <string name="budget_less_than_5">Moins de 5€</string>
+    <string name="budget_between_5_and_8">Entre 5 et 8€</string>
+    <string name="budget_more_than_8">Plus de 8€</string>
+    <string name="frequency_question">Quelle est votre fréquence de consommation de Bubble Tea ?</string>
+    <string name="first_time">Première fois</string>
+    <string name="occasional">Occasionnel</string>
+    <string name="regular">Régulier</string>
+    <string name="topping_budget_question">Quel est votre budget maximal pour un topping supplémentaire ?</string>
+    <string name="topping_budget_50_cents">0,50 €</string>
+    <string name="topping_budget_1_euro">1 €</string>
+    <string name="topping_budget_no_limit">Peu importe</string>
+
+    <string name="texture_preferences_title">Préférences de Texture</string>
+    <string name="question_texture_preferences">Quelle texture préférez-vous dans vos boissons ?</string>
+    <string name="check_gelatinous">Gélatineux</string>
+    <string name="check_crunchy">Croquant</string>
+    <string name="check_creamy">Crémeux</string>
+    <string name="check_liquid">Liquide</string>
+    <string name="question_toppings_quantity">Quelle quantité de garnitures préférez-vous ?</string>
+    <string name="radio_no_toppings">Pas de garnitures</string>
+    <string name="radio_few_toppings">Quelques garnitures</string>
+    <string name="radio_medium_toppings">Moyenne garniture</string>
+    <string name="radio_many_toppings">Beaucoup de garnitures</string>
+    <string name="question_toppings_sweetness">Quelle douceur préférez-vous pour vos garnitures ?</string>
+    <string name="radio_sweet_toppings">Sucré</string>
+    <string name="radio_neutral_toppings">Neutre</string>
+
+    <string name="drink_complexity_fragment_title">Complexité et Audace de la Boisson</string>
+    <string name="complexity_title">Préférez-vous une boisson simple ou complexe ?</string>
+    <string name="simple">Simple</string>
+    <string name="complex">Complexe</string>
+    <string name="boldness_title">Quel est votre niveau d\'audace dans vos choix de boissons ?</string>
+    <string name="classic">Classique</string>
+    <string name="innovative">Innovant</string>
+    <string name="recipe_preference_title">Préférez-vous tester une nouvelle recette ou rester sur vos classiques ?</string>
+    <string name="new_recipe">Nouvelle recette</string>
+    <string name="classic_recipe">Classique</string>
+    <string name="complexity_selected">Complexité sélectionnée : </string>
+    <string name="boldness_selected">Force sélectionnée : </string>
+    <string name="recipe_preference_selected">Préférence de recette sélectionnée : </string>
+
+    <string name="goal_selected">Objectif sélectionné : </string>
+    <string name="nutrition_selected">Préférence nutritionnelle sélectionnée : </string>
+    <string name="mood_selected">Humeur sélectionnée : </string>
+    <string name="drink_goal_fragment_title">Objectif principal de la boisson</string>
+    <string name="goal_question">Quel est votre but principal en choisissant cette boisson ?</string>
+    <string name="goal_refresh">Rafraîchir</string>
+    <string name="goal_relax">Détendre</string>
+    <string name="goal_indulgence">Gourmandise</string>
+    <string name="nutrition_question">Avez-vous un objectif nutritionnel particulier avec votre boisson ?</string>
+    <string name="nutrition_yes">Oui</string>
+    <string name="nutrition_no">Non</string>
+    <string name="mood_question">Quelle influence a le choix de la boisson sur votre humeur ?</string>
+    <string name="mood_positive">Positif</string>
+    <string name="mood_neutral">Neutre</string>
+    <string name="mood_indifferent">Indifférent</string>
+
+    <string name="fruit_preferences_title">Préférences de saveurs et textures</string>
+    <string name="question_fruit">Quel fruit préférez-vous ?</string>
+    <string name="question_texture">Préférez-vous des boissons fruitées ou crémeuses ?</string>
+    <string name="texture_fruity">Fruitées</string>
+    <string name="texture_creamy">Crémeuses</string>
+
+    <string name="drink_preferences_title">Préférences de Boisson</string>
+    <string name="calorie_preference_question">Quelle est votre préférence en termes de calories ?</string>
+    <string name="low_calorie">Faible en calories</string>
+    <string name="moderate_calorie">Modérée</string>
+    <string name="no_preference_calorie">Peu importe</string>
+    <string name="milk_preference_question">Quel type de lait aimez-vous dans votre boisson ?</string>
+    <string name="classic_milk">Lait classique</string>
+    <string name="almond_milk">Lait d\'amande</string>
+    <string name="no_milk">Sans lait</string>
+    <string name="sugar_preference_question">Quel niveau de sucre préférez-vous ?</string>
+    <string name="no_sugar">Sans sucre</string>
+    <string name="sugar_25">25% de sucre</string>
+    <string name="sugar_50">50% de sucre</string>
+    <string name="sugar_75">75% de sucre</string>
+
+    <string name="tea_preferences_title">Préférences de Thé</string>
+    <string name="tea_base_question">Quelle base de thé préférez-vous ?</string>
+    <string name="green_tea">Thé vert</string>
+    <string name="black_tea">Thé noir</string>
+    <string name="jasmine_tea">Thé au jasmin</string>
+    <string name="intensity_question">Quel est le niveau d\'intensité souhaité ?</string>
+    <string name="light_intensity">Légère</string>
+    <string name="medium_intensity">Moyenne</string>
+    <string name="strong_intensity">Forte</string>
+    <string name="temperature_preference_question">Préférez-vous une boisson chaude ou froide ?</string>
+    <string name="hot">Chaud</string>
+    <string name="cold">Froid</string>
+
+    <string name="tea_preference">Préférences de thé:</string>
+    <string name="fruit_texture_intensity_question">Saveur fruitée et texture:</string>
+    <string name="sugar_preference">Préférences de sucre:</string>
+    <string name="combined_preferences">Préférences combinées:</string>
+    <string name="allergies_preference">Allergies:</string>
+    <string name="drink_complexity_question">Complexité de la boisson:</string>
+    <string name="budget_preference">Préférence de budget:</string>
+    <string name="drink_goal">Objectif de la boisson:</string>
+    <string name="selected">sélectionnée : </string>
+    <string name="mentioned">mentionnées : </string>
+    <string name="restriction">Restriction </string>
+    <string name="allergies">Allergies </string>
+    <string name="budget">Budget </string>
+    <string name="freuency">Fréquence </string>
+    <string name="budget_topping">Budget pour toppings </string>
+    <string name="calories">Calories </string>
+    <string name="milk">Lait </string>
+    <string name="sugar">Sucre </string>
+    <string name="tea">Thé </string>
+    <string name="intensity">Intensité </string>
+    <string name="temp">Température </string>
+    <string name="gel">Texture gélatineuse  </string>
+    <string name="croq">Texture croquante  </string>
+    <string name="crem">Texture crémeuse </string>
+    <string name="liquid">Texture liquide </string>
+    <string name="quantity">Quantité de garnitures </string>
+    <string name="douceur">Douceur de garnitures </string>
+    <string name="switch_language">Changer la langue</string>
+    <string name="current_language_label">Langue actuelle :</string>
+
+</resources>

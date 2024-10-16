@@ -28,7 +28,7 @@ public class PreferencesFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_preferences, container, false);
 
         TextView titleTextView = view.findViewById(R.id.titleTextView);
-        titleTextView.setText("Préférences de Boisson");
+        titleTextView.setText(R.string.drink_preferences_title);
 
         radioGroupCalories = view.findViewById(R.id.radioGroupCalories);
         radioGroupMilk = view.findViewById(R.id.radioGroupMilk);
@@ -65,26 +65,25 @@ public class PreferencesFragment extends Fragment {
         int selectedCaloriesId = radioGroupCalories.getCheckedRadioButtonId();
         if (selectedCaloriesId != -1) {
             String selectedCalories = ((TextView) radioGroupCalories.findViewById(selectedCaloriesId)).getText().toString();
-            selectedPreferences.append("Calories sélectionnées : ").append(selectedCalories).append("<br>");
+            selectedPreferences.append(getString(R.string.calories)).append(getString(R.string.complexity_selected)).append(selectedCalories).append("<br>");
         }
 
         // Obtenir la préférence pour le lait
         int selectedMilkId = radioGroupMilk.getCheckedRadioButtonId();
         if (selectedMilkId != -1) {
             String selectedMilk = ((TextView) radioGroupMilk.findViewById(selectedMilkId)).getText().toString();
-            selectedPreferences.append("Lait sélectionné : ").append(selectedMilk).append("<br>");
+            selectedPreferences.append(getString(R.string.milk)).append(getString(R.string.complexity_selected)).append(selectedMilk).append("<br>");
         }
 
         // Obtenir la préférence pour le sucre
         int selectedSugarId = radioGroupSugar.getCheckedRadioButtonId();
         if (selectedSugarId != -1) {
             String selectedSugar = ((TextView) radioGroupSugar.findViewById(selectedSugarId)).getText().toString();
-            selectedPreferences.append("Sucre sélectionné : ").append(selectedSugar).append("<br>");
+            selectedPreferences.append(getString(R.string.sugar)).append(getString(R.string.complexity_selected)).append(selectedSugar).append("<br>");
         }
 
         return selectedPreferences.toString();
     }
-
 
     public void setViewPager(ViewPager2 viewPager) {
         this.viewPager = viewPager;

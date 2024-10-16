@@ -10,7 +10,7 @@
         android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Préférences de Boisson"
+        android:text="@string/drink_preferences_title"
         android:textSize="24sp"
         android:textStyle="bold"
         android:gravity="center"
@@ -19,7 +19,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quelle est votre préférence en termes de calories ?"
+        android:text="@string/calorie_preference_question"
         android:textSize="18sp"
         android:textStyle="bold"
         android:gravity="center"/>
@@ -34,25 +34,25 @@
             android:id="@+id/radioLowCal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Faible en calories" />
+            android:text="@string/low_calorie" />
 
         <RadioButton
             android:id="@+id/radioModerateCal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Modérée" />
+            android:text="@string/moderate_calorie" />
 
         <RadioButton
             android:id="@+id/radioNoPreferenceCal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Peu importe" />
+            android:text="@string/no_preference_calorie" />
     </RadioGroup>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quel type de lait aimez-vous dans votre boisson ?"
+        android:text="@string/milk_preference_question"
         android:textSize="18sp"
         android:textStyle="bold"
         android:gravity="center"/>
@@ -68,25 +68,25 @@
             android:id="@+id/radioClassicMilk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lait classique" />
+            android:text="@string/classic_milk" />
 
         <RadioButton
             android:id="@+id/radioAlmondMilk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lait d'amande" />
+            android:text="@string/almond_milk" />
 
         <RadioButton
             android:id="@+id/radioNoMilk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sans lait" />
+            android:text="@string/no_milk" />
     </RadioGroup>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quel niveau de sucre préférez-vous ?"
+        android:text="@string/sugar_preference_question"
         android:textSize="18sp"
         android:textStyle="bold"
         android:gravity="center"/>
@@ -102,25 +102,24 @@
             android:id="@+id/radioNoSugar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sans sucre" />
+            android:text="@string/no_sugar" />
 
         <RadioButton
             android:id="@+id/radio25Sugar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="25% de sucre" />
+            android:text="@string/sugar_25" />
 
         <RadioButton
             android:id="@+id/radio50Sugar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="50% de sucre" />
+            android:text="@string/sugar_50" />
 
         <RadioButton
             android:id="@+id/radio75Sugar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="75% de sucre" />
-
+            android:text="@string/sugar_75" />
     </RadioGroup>
 </LinearLayout>

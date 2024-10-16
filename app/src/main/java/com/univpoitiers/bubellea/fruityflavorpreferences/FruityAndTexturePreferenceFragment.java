@@ -4,10 +4,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RadioGroup;
-import android.widget.Spinner;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -83,8 +83,6 @@ public class FruityAndTexturePreferenceFragment extends Fragment {
 
         return selectedPreferences.toString();
     }
-
-
 
     public void setViewPager(ViewPager2 viewPager) {
         this.viewPager = viewPager;

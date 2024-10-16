@@ -30,13 +30,13 @@ public class FormObjectiveActivity extends AppCompatActivity {
 
         // Afficher le message de bienvenue avec le prénom
         if (firstName != null && !firstName.isEmpty()) {
-            greetingTextView.setText("Bonjour " + firstName + " !");
+            greetingTextView.setText(getString(R.string.greeting_text) + " " + firstName + " !");
         } else {
-            greetingTextView.setText("Bonjour !");
+            greetingTextView.setText(getString(R.string.greeting_text));
         }
 
         // Définir le texte expliquant l'objectif du formulaire
-        objectiveTextView.setText("Bienvenue dans notre formulaire personnalisé. Ce questionnaire nous permettra de mieux comprendre vos préférences pour vous offrir la boisson parfaite. Prenez le temps de répondre à chaque question pour que nous puissions vous offrir une expérience unique !");
+        objectiveTextView.setText(getString(R.string.form_objective));
 
         // Gérer le clic sur le bouton "Commencer le formulaire"
         startFormButton.setOnClickListener(new View.OnClickListener() {

@@ -20,14 +20,15 @@
         android:id="@+id/menuImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="Menu Image" />
+        android:contentDescription="Menu Image"
+        android:visibility="gone" /> <!-- Cacher l'image au départ -->
 
     <EditText
         android:id="@+id/firstNameEditText"
         android:layout_width="333dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:hint="Entrez votre prénom"
+        android:hint="@string/enter_first_name"
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textSize="18sp" />
@@ -37,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Continuer" />
+        android:text="@string/continue_button" />
 
     <!-- Nouveau bouton pour visiter le menu -->
     <Button
@@ -46,6 +47,22 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
-        android:text="Visiter notre menu" />
+        android:text="@string/visit_menu_button" />
 
+    <Switch
+        android:id="@+id/languageSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/switch_language"
+        android:layout_gravity="center"
+        android:checked="false" />
+
+    <TextView
+        android:id="@+id/currentLanguageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/current_language_label"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp" />
 </LinearLayout>

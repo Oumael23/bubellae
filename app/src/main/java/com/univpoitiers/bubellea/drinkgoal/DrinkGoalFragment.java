@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
@@ -18,7 +17,6 @@ public class DrinkGoalFragment extends Fragment {
 
     private ViewPager2 viewPager;
     private RadioGroup radioGroupGoal, radioGroupNutrition, radioGroupMood;
-
 
     @Nullable
     @Override
@@ -57,21 +55,21 @@ public class DrinkGoalFragment extends Fragment {
         int selectedGoalId = radioGroupGoal.getCheckedRadioButtonId();
         if (selectedGoalId != -1) {
             String selectedGoal = ((TextView) radioGroupGoal.findViewById(selectedGoalId)).getText().toString();
-            selectedPreferences.append("Objectif sélectionné : ").append(selectedGoal).append("<br>");
+            selectedPreferences.append(getString(R.string.goal_selected)).append(selectedGoal).append("<br>");
         }
 
         // Obtenir la préférence nutritionnelle
         int selectedNutritionId = radioGroupNutrition.getCheckedRadioButtonId();
         if (selectedNutritionId != -1) {
             String selectedNutrition = ((TextView) radioGroupNutrition.findViewById(selectedNutritionId)).getText().toString();
-            selectedPreferences.append("Préférence nutritionnelle sélectionnée : ").append(selectedNutrition).append("<br>");
+            selectedPreferences.append(getString(R.string.nutrition_selected)).append(selectedNutrition).append("<br>");
         }
 
         // Obtenir l'humeur
         int selectedMoodId = radioGroupMood.getCheckedRadioButtonId();
         if (selectedMoodId != -1) {
             String selectedMood = ((TextView) radioGroupMood.findViewById(selectedMoodId)).getText().toString();
-            selectedPreferences.append("Humeur sélectionnée : ").append(selectedMood).append("<br>");
+            selectedPreferences.append(getString(R.string.mood_selected)).append(selectedMood).append("<br>");
         }
 
         return selectedPreferences.toString();

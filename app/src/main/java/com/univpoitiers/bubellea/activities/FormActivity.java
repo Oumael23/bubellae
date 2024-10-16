@@ -100,7 +100,7 @@ public class FormActivity extends AppCompatActivity {
                     viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
                 } else {
                     // Afficher un Toast si toutes les questions ne sont pas répondues
-                    Toast.makeText(FormActivity.this, "Veuillez répondre à toutes les questions.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(FormActivity.this, getString(R.string.toast_all_questions), Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -146,22 +146,24 @@ public class FormActivity extends AppCompatActivity {
 
         for (int i = 0; i < adapter.getItemCount(); i++) {
             Fragment fragment = adapter.getFragmentAt(i);
-            if (fragment instanceof TeaPreferencesFragment) {
-                results.append("<b>Tea Preferences:</b><br>").append(((TeaPreferencesFragment) fragment).getSelectedPreferences()).append("<br>");
-            } else if (fragment instanceof FruityAndTexturePreferenceFragment) {
-                results.append("<b>Fruity & Texture:</b><br>").append(((FruityAndTexturePreferenceFragment) fragment).getSelectedPreferences()).append("<br>");
-            } else if (fragment instanceof PreferencesFragment) {
-                results.append("<b>Sugar Preferences:</b><br>").append(((PreferencesFragment) fragment).getSelectedPreferences()).append("<br>");
-            } else if (fragment instanceof CombinedPreferenceFragment) {
-                results.append("<b>Combined Preferences:</b><br>").append(((CombinedPreferenceFragment) fragment).getSelectedPreferences()).append("<br>");
-            } else if (fragment instanceof AllergiesFragment) {
-                results.append("<b>Allergies:</b><br>").append(((AllergiesFragment) fragment).getSelectedPreferences()).append("<br>");
-            } else if (fragment instanceof DrinkComplexityFragment) {
-                results.append("<b>Drink Complexity:</b><br>").append(((DrinkComplexityFragment) fragment).getSelectedPreferences()).append("<br>");
-            } else if (fragment instanceof BudgetPreferenceFragment) {
-                results.append("<b>Budget Preference:</b><br>").append(((BudgetPreferenceFragment) fragment).getSelectedPreferences()).append("<br>");
-            } else if (fragment instanceof DrinkGoalFragment) {
-                results.append("<b>Drink Goal:</b><br>").append(((DrinkGoalFragment) fragment).getSelectedPreferences()).append("<br>");
+            if (fragment != null && fragment.isAdded()) {
+                if (fragment instanceof TeaPreferencesFragment) {
+                    results.append("<b>").append(getString(R.string.tea_preference)).append("</b><br>").append(((TeaPreferencesFragment) fragment).getSelectedPreferences()).append("<br>");
+                } else if (fragment instanceof FruityAndTexturePreferenceFragment) {
+                    results.append("<b>").append(getString(R.string.fruit_texture_intensity_question)).append("</b><br>").append(((FruityAndTexturePreferenceFragment) fragment).getSelectedPreferences()).append("<br>");
+                } else if (fragment instanceof PreferencesFragment) {
+                    results.append("<b>").append(getString(R.string.sugar_preference)).append("</b><br>").append(((PreferencesFragment) fragment).getSelectedPreferences()).append("<br>");
+                } else if (fragment instanceof CombinedPreferenceFragment) {
+                    results.append("<b>").append(getString(R.string.combined_preferences)).append("</b><br>").append(((CombinedPreferenceFragment) fragment).getSelectedPreferences()).append("<br>");
+                } else if (fragment instanceof AllergiesFragment) {
+                    results.append("<b>").append(getString(R.string.allergies_preference)).append("</b><br>").append(((AllergiesFragment) fragment).getSelectedPreferences()).append("<br>");
+                } else if (fragment instanceof DrinkComplexityFragment) {
+                    results.append("<b>").append(getString(R.string.drink_complexity_question)).append("</b><br>").append(((DrinkComplexityFragment) fragment).getSelectedPreferences()).append("<br>");
+                } else if (fragment instanceof BudgetPreferenceFragment) {
+                    results.append("<b>").append(getString(R.string.budget_preference)).append("</b><br>").append(((BudgetPreferenceFragment) fragment).getSelectedPreferences()).append("<br>");
+                } else if (fragment instanceof DrinkGoalFragment) {
+                    results.append("<b>").append(getString(R.string.drink_goal)).append("</b><br>").append(((DrinkGoalFragment) fragment).getSelectedPreferences()).append("<br>");
+                }
             }
         }
 

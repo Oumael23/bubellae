@@ -11,7 +11,7 @@
         android:id="@+id/budgetFragmentTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Budget et Fréquence de Consommation"
+        android:text="@string/title_budget"
         android:textSize="24sp"
         android:gravity="center"
         android:textStyle="bold"
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:gravity="center"
-        android:text="Quel est votre budget moyen pour une boisson ?"
+        android:text="@string/budget_question"
         android:textSize="18sp" />
 
     <RadioGroup
@@ -38,19 +38,19 @@
             android:id="@+id/radioBudgetLessThan5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Moins de 5€" />
+            android:text="@string/budget_less_than_5" />
 
         <RadioButton
             android:id="@+id/radioBudgetBetween5And8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Entre 5 et 8€" />
+            android:text="@string/budget_between_5_and_8" />
 
         <RadioButton
             android:id="@+id/radioBudgetMoreThan8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Plus de 8€" />
+            android:text="@string/budget_more_than_8" />
     </RadioGroup>
 
     <!-- Question: Quelle est votre fréquence de consommation de Bubble Tea ? -->
@@ -58,7 +58,7 @@
         android:id="@+id/questionTextFrequency"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quelle est votre fréquence de consommation de Bubble Tea ?"
+        android:text="@string/frequency_question"
         android:textSize="18sp"
         android:textStyle="bold"
         android:gravity="center"
@@ -75,19 +75,19 @@
             android:id="@+id/radioFirstTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Première fois" />
+            android:text="@string/first_time" />
 
         <RadioButton
             android:id="@+id/radioOccasional"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Occasionnel" />
+            android:text="@string/occasional" />
 
         <RadioButton
             android:id="@+id/radioRegular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Régulier" />
+            android:text="@string/regular" />
     </RadioGroup>
 
     <!-- Question: Quel est votre budget maximal pour un topping supplémentaire ? -->
@@ -95,9 +95,9 @@
         android:id="@+id/questionTextToppingBudget"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/topping_budget_question"
         android:textStyle="bold"
         android:gravity="center"
-        android:text="Quel est votre budget maximal pour un topping supplémentaire ?"
         android:textSize="18sp"
         android:layout_marginTop="24dp" />
 
@@ -112,18 +112,18 @@
             android:id="@+id/radioToppingBudget50cents"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0,50 €" />
+            android:text="@string/topping_budget_50_cents" />
 
         <RadioButton
             android:id="@+id/radioToppingBudget1euro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1 €" />
+            android:text="@string/topping_budget_1_euro" />
 
         <RadioButton
             android:id="@+id/radioToppingBudgetNoLimit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Peu importe" />
+            android:text="@string/topping_budget_no_limit" />
     </RadioGroup>
 </LinearLayout>

@@ -10,7 +10,7 @@
         android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Préférences de Thé"
+        android:text="@string/tea_preferences_title"
         android:textSize="24sp"
         android:textStyle="bold"
         android:gravity="center"
@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:text="Quelle base de thé préférez-vous ?"
+        android:text="@string/tea_base_question"
         android:textSize="18sp" />
 
     <RadioGroup
@@ -34,25 +34,25 @@
             android:id="@+id/radioGreenTea"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Thé vert" />
+            android:text="@string/green_tea" />
 
         <RadioButton
             android:id="@+id/radioBlackTea"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Thé noir" />
+            android:text="@string/black_tea" />
 
         <RadioButton
             android:id="@+id/radioJasmineTea"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Thé au jasmin" />
+            android:text="@string/jasmine_tea" />
     </RadioGroup>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quel est le niveau d'intensité souhaité ?"
+        android:text="@string/intensity_question"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_marginTop="24dp" />
@@ -68,25 +68,25 @@
             android:id="@+id/radioLight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Légère" />
+            android:text="@string/light_intensity" />
 
         <RadioButton
             android:id="@+id/radioMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Moyenne" />
+            android:text="@string/medium_intensity" />
 
         <RadioButton
             android:id="@+id/radioStrong"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Forte" />
+            android:text="@string/strong_intensity" />
     </RadioGroup>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Préférez-vous une boisson chaude ou froide ?"
+        android:text="@string/temperature_preference_question"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_marginTop="24dp" />
@@ -102,13 +102,13 @@
             android:id="@+id/radioHot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Chaud" />
+            android:text="@string/hot" />
 
         <RadioButton
             android:id="@+id/radioCold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Froid" />
+            android:text="@string/cold" />
     </RadioGroup>
 
 </LinearLayout>

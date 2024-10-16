@@ -10,19 +10,18 @@
         android:id="@+id/drinkComplexityFragmentTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Complexité et Audace de la Boisson"
+        android:text="@string/drink_complexity_fragment_title"
         android:textSize="26sp"
         android:gravity="center"
         android:textStyle="bold"
         android:layout_marginBottom="16dp"
         android:layout_gravity="center"/>
 
-    <!-- Question: Préférez-vous une boisson simple ou complexe ? -->
     <TextView
         android:id="@+id/complexityTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Préférez-vous une boisson simple ou complexe ?"
+        android:text="@string/complexity_title"
         android:textSize="18sp"
         android:gravity="center"
         android:textStyle="bold"
@@ -39,21 +38,20 @@
             android:id="@+id/radioSimple"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Simple" />
+            android:text="@string/simple" />
 
         <RadioButton
             android:id="@+id/radioComplex"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Complexe" />
+            android:text="@string/complex" />
     </RadioGroup>
 
-    <!-- Question: Quel est votre niveau d'audace dans vos choix de boissons ? -->
     <TextView
         android:id="@+id/boldnessTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quel est votre niveau d'audace dans vos choix de boissons ?"
+        android:text="@string/boldness_title"
         android:textSize="18sp"
         android:textStyle="bold"
         android:gravity="center"
@@ -71,21 +69,20 @@
             android:id="@+id/radioClassic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Classique" />
+            android:text="@string/classic" />
 
         <RadioButton
             android:id="@+id/radioInnovative"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Innovant" />
+            android:text="@string/innovative" />
     </RadioGroup>
 
-    <!-- Question: Préférez-vous tester une nouvelle recette ou rester sur vos classiques ? -->
     <TextView
         android:id="@+id/recipePreferenceTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Préférez-vous tester une nouvelle recette ou rester sur vos classiques ?"
+        android:text="@string/recipe_preference_title"
         android:textSize="18sp"
         android:gravity="center"
         android:textStyle="bold"
@@ -103,13 +100,13 @@
             android:id="@+id/radioNewRecipe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nouvelle recette" />
+            android:text="@string/new_recipe" />
 
         <RadioButton
             android:id="@+id/radioClassicRecipe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Classique" />
+            android:text="@string/classic_recipe" />
     </RadioGroup>
 
 </LinearLayout>

@@ -12,10 +12,10 @@
         android:id="@+id/drinkGoalFragmentTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Objectif principal de la boisson"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_gravity="center" />
+        android:text="@string/drink_goal_fragment_title"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    android:layout_gravity="center" />
 
     <!-- Question: Quel est votre but principal en choisissant cette boisson ? -->
     <TextView
@@ -24,8 +24,8 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:gravity="center"
-        android:text="Quel est votre but principal en choisissant cette boisson ?"
-        android:textSize="18sp" />
+        android:text="@string/goal_question"
+    android:textSize="18sp" />
 
     <RadioGroup
         android:id="@+id/radioGroupGoal"
@@ -37,19 +37,19 @@
             android:id="@+id/radioRefresh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Rafraîchir" />
+            android:text="@string/goal_refresh" />
 
         <RadioButton
             android:id="@+id/radioRelax"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Détendre" />
+            android:text="@string/goal_relax" />
 
         <RadioButton
             android:id="@+id/radioIndulgence"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gourmandise" />
+            android:text="@string/goal_indulgence" />
     </RadioGroup>
 
     <!-- Question: Avez-vous un objectif nutritionnel particulier avec votre boisson ? -->
@@ -57,10 +57,10 @@
         android:id="@+id/questionTextNutrition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Avez-vous un objectif nutritionnel particulier avec votre boisson ?"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:gravity="center"/>
+        android:text="@string/nutrition_question"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    android:gravity="center"/>
 
     <RadioGroup
         android:id="@+id/radioGroupNutrition"
@@ -72,13 +72,13 @@
             android:id="@+id/radioNutritionYes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Oui" />
+            android:text="@string/nutrition_yes" />
 
         <RadioButton
             android:id="@+id/radioNutritionNo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Non" />
+            android:text="@string/nutrition_no" />
     </RadioGroup>
 
     <!-- Question: Quelle influence a le choix de la boisson sur votre humeur ? -->
@@ -86,10 +86,10 @@
         android:id="@+id/questionTextMood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quelle influence a le choix de la boisson sur votre humeur ?"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:gravity="center" />
+        android:text="@string/mood_question"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    android:gravity="center" />
 
     <RadioGroup
         android:id="@+id/radioGroupMood"
@@ -101,19 +101,19 @@
             android:id="@+id/radioMoodPositive"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Positif" />
+            android:text="@string/mood_positive" />
 
         <RadioButton
             android:id="@+id/radioMoodNeutral"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Neutre" />
+            android:text="@string/mood_neutral" />
 
         <RadioButton
             android:id="@+id/radioMoodIndifferent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Indifférent" />
+            android:text="@string/mood_indifferent" />
     </RadioGroup>
 
 </LinearLayout>

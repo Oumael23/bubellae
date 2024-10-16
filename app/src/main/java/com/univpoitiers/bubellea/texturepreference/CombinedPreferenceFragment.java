@@ -66,35 +66,34 @@ public class CombinedPreferenceFragment extends Fragment {
 
         // Obtenir les textures sélectionnées
         if (checkGelatinous.isChecked()) {
-            selectedPreferences.append("Texture gélatineuse sélectionnée.\n");
+            selectedPreferences.append(getString(R.string.gel)).append(getString(R.string.selected)).append("<br>");
         }
         if (checkCrunchy.isChecked()) {
-            selectedPreferences.append("Texture croquante sélectionnée.\n");
+            selectedPreferences.append(getString(R.string.croq)).append(getString(R.string.selected)).append("<br>");
         }
         if (checkCreamy.isChecked()) {
-            selectedPreferences.append("Texture crémeuse sélectionnée.\n");
+            selectedPreferences.append(getString(R.string.crem)).append(getString(R.string.selected)).append("<br>");
         }
         if (checkLiquid.isChecked()) {
-            selectedPreferences.append("Texture liquide sélectionnée.\n");
+            selectedPreferences.append(getString(R.string.liquid)).append(getString(R.string.selected)).append("<br>");
         }
 
         // Obtenir la quantité de garnitures sélectionnée
         int selectedQuantityId = radioGroupToppingsQuantity.getCheckedRadioButtonId();
         if (selectedQuantityId != -1) {
             String selectedQuantity = ((TextView) radioGroupToppingsQuantity.findViewById(selectedQuantityId)).getText().toString();
-            selectedPreferences.append("Quantité de garnitures sélectionnée : ").append(selectedQuantity).append("<br>");
+            selectedPreferences.append(getString(R.string.quantity)).append(getString(R.string.selected)).append(selectedQuantity).append("<br>");
         }
 
         // Obtenir la douceur des garnitures sélectionnée
         int selectedSweetnessId = radioGroupToppingsSweetness.getCheckedRadioButtonId();
         if (selectedSweetnessId != -1) {
             String selectedSweetness = ((TextView) radioGroupToppingsSweetness.findViewById(selectedSweetnessId)).getText().toString();
-            selectedPreferences.append("Douceur de garnitures sélectionnée : ").append(selectedSweetness).append("<br>");
+            selectedPreferences.append(getString(R.string.douceur)).append(getString(R.string.selected)).append(selectedSweetness).append("<br>");
         }
 
         return selectedPreferences.toString();
     }
-
 
     public void setViewPager(ViewPager2 viewPager) {
         this.viewPager = viewPager;

@@ -48,7 +48,6 @@ public class DrinkComplexityFragment extends Fragment {
                 radioGroupRecipePreference.getCheckedRadioButtonId() != -1;
     }
 
-
     public String getSelectedPreferences() {
         StringBuilder selectedPreferences = new StringBuilder();
 
@@ -56,21 +55,21 @@ public class DrinkComplexityFragment extends Fragment {
         int selectedComplexityId = radioGroupComplexity.getCheckedRadioButtonId();
         if (selectedComplexityId != -1) {
             String selectedComplexity = ((TextView) radioGroupComplexity.findViewById(selectedComplexityId)).getText().toString();
-            selectedPreferences.append("Complexité sélectionnée : ").append(selectedComplexity).append("<br>");
+            selectedPreferences.append(getString(R.string.complexity_selected)).append(selectedComplexity).append("<br>");
         }
 
         // Obtenir la force de la boisson
         int selectedBoldnessId = radioGroupBoldness.getCheckedRadioButtonId();
         if (selectedBoldnessId != -1) {
             String selectedBoldness = ((TextView) radioGroupBoldness.findViewById(selectedBoldnessId)).getText().toString();
-            selectedPreferences.append("Force sélectionnée : ").append(selectedBoldness).append("<br>");
+            selectedPreferences.append(getString(R.string.boldness_selected)).append(selectedBoldness).append("<br>");
         }
 
         // Obtenir la préférence de recette
         int selectedRecipeId = radioGroupRecipePreference.getCheckedRadioButtonId();
         if (selectedRecipeId != -1) {
             String selectedRecipe = ((TextView) radioGroupRecipePreference.findViewById(selectedRecipeId)).getText().toString();
-            selectedPreferences.append("Préférence de recette sélectionnée : ").append(selectedRecipe).append("<br>");
+            selectedPreferences.append(getString(R.string.recipe_preference_selected)).append(selectedRecipe).append("<br>");
         }
 
         return selectedPreferences.toString();

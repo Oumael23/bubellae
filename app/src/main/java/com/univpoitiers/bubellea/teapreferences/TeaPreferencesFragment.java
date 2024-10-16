@@ -1,7 +1,6 @@
 package com.univpoitiers.bubellea.teapreferences;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,14 +21,13 @@ public class TeaPreferencesFragment extends Fragment {
     private RadioGroup radioGroupIntensity;
     private RadioGroup radioGroupTemperature;
 
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_tea_preferences, container, false);
 
         TextView titleTextView = view.findViewById(R.id.titleTextView);
-        titleTextView.setText("Préférences de Thé");
+        titleTextView.setText(R.string.tea_preferences_title);
 
         radioGroupTea = view.findViewById(R.id.radioGroupTea);
         radioGroupIntensity = view.findViewById(R.id.radioGroupIntensity);
@@ -66,26 +64,25 @@ public class TeaPreferencesFragment extends Fragment {
         int selectedTeaId = radioGroupTea.getCheckedRadioButtonId();
         if (selectedTeaId != -1) {
             String selectedTea = ((TextView) radioGroupTea.findViewById(selectedTeaId)).getText().toString();
-            selectedPreferences.append("Thé sélectionné : ").append(selectedTea).append("<br>");
+            selectedPreferences.append(getString(R.string.tea)).append(getString(R.string.selected)).append(selectedTea).append("<br>");
         }
 
         // Obtenir la préférence pour l'intensité
         int selectedIntensityId = radioGroupIntensity.getCheckedRadioButtonId();
         if (selectedIntensityId != -1) {
             String selectedIntensity = ((TextView) radioGroupIntensity.findViewById(selectedIntensityId)).getText().toString();
-            selectedPreferences.append("Intensité sélectionnée : ").append(selectedIntensity).append("<br>");
+            selectedPreferences.append(getString(R.string.intensity)).append(getString(R.string.selected)).append(selectedIntensity).append("<br>");
         }
 
         // Obtenir la préférence pour la température
         int selectedTemperatureId = radioGroupTemperature.getCheckedRadioButtonId();
         if (selectedTemperatureId != -1) {
             String selectedTemperature = ((TextView) radioGroupTemperature.findViewById(selectedTemperatureId)).getText().toString();
-            selectedPreferences.append("Température sélectionnée : ").append(selectedTemperature).append("<br>");
+            selectedPreferences.append(getString(R.string.temp)).append(getString(R.string.selected)).append(selectedTemperature).append("<br>");
         }
 
         return selectedPreferences.toString();
     }
-
 
     public void setViewPager(ViewPager2 viewPager) {
         this.viewPager = viewPager;
