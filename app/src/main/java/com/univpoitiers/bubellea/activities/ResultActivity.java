@@ -23,7 +23,7 @@ import java.util.Random;
 public class ResultActivity extends AppCompatActivity {
 
     private TextView resultsTextView;
-    private Button buttonQuit;
+    private Button buttonQuit, buttonEmail;
     private ImageView resultImageView;
 
 
@@ -36,6 +36,8 @@ public class ResultActivity extends AppCompatActivity {
         Button buttonSave = findViewById(R.id.buttonSave);
         buttonQuit = findViewById(R.id.buttonQuit);
         resultImageView = findViewById(R.id.resultImageView);
+        buttonEmail = findViewById(R.id.buttonEmail);
+
 
         // Récupérer les données passées
         Intent intent = getIntent();
@@ -50,6 +52,9 @@ public class ResultActivity extends AppCompatActivity {
 
             finishAffinity(); // Quitter l'application
         });
+
+        buttonEmail.setOnClickListener(v -> sendResults(results));
+
 
         // Gérer le clic sur le bouton de sauvegarde
         buttonSave.setOnClickListener(v -> saveResultsToFile(results));
@@ -102,4 +107,29 @@ public class ResultActivity extends AppCompatActivity {
             Toast.makeText(this, getString(R.string.results_save_error), Toast.LENGTH_SHORT).show();
         }
     }
+
+    private void sendResults(String results) {
+
+        if (results == null || results.isEmpty()) {
+            Toast.makeText(this, getString(R.string.results_save_error), Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        results = results.replaceAll("<br>", "\n").replaceAll("<b>", "").replaceAll("</b>", "");
+
+
+        // Créer un Intent pour envoyer un e-mail
+        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+        emailIntent.setType("text/plain");
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Résultats de votre sélection"); // Sujet de l'e-mail
+        emailIntent.putExtra(Intent.EXTRA_TEXT, results); // Corps de l'e-mail
+
+        // Vérifier s'il y a une application de messagerie pour gérer l'Intent
+        if (emailIntent.resolveActivity(getPackageManager()) != null) {
+            startActivity(Intent.createChooser(emailIntent, "Envoyer l'e-mail"));
+        } else {
+            Toast.makeText(this, "Aucun client de messagerie trouvé", Toast.LENGTH_SHORT).show();
+        }
+    }
+
 }

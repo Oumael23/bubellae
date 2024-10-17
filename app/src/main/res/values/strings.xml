@@ -159,4 +159,6 @@
     <string name="switch_language">Switch Language</string>
     <string name="current_language_label">Current Language:</string>
 
+    <string name="send_results_email">Send</string>
+
 </resources>

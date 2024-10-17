@@ -44,14 +44,28 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <!-- Bouton Sauvegarder à droite en bas -->
+
+        <!-- Bouton Envoyer par e-mail au centre en bas -->
         <Button
             android:id="@+id/buttonSave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:layout_marginBottom="16dp"
             android:text="@string/save_results"
             android:textColor="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/buttonEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/send_results_email"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonQuit"
+            app:layout_constraintEnd_toStartOf="@id/buttonSave" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

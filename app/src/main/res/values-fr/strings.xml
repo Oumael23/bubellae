@@ -157,5 +157,7 @@
     <string name="douceur">Douceur de garnitures </string>
     <string name="switch_language">Changer la langue</string>
     <string name="current_language_label">Langue actuelle :</string>
+    <string name="send_results_email">Envoyer</string>
+
 
 </resources>
