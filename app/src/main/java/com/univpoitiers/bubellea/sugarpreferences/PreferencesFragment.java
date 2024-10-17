@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioGroup;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -21,7 +22,12 @@ public class PreferencesFragment extends Fragment {
 
     private RadioGroup radioGroupCalories;
     private RadioGroup radioGroupMilk;
-    private RadioGroup radioGroupSugar;
+
+    private SeekBar sugarSeekBar;
+
+    private TextView sugarValueTextView;
+
+
 
     @Nullable
     @Override
@@ -33,12 +39,25 @@ public class PreferencesFragment extends Fragment {
 
         radioGroupCalories = view.findViewById(R.id.radioGroupCalories);
         radioGroupMilk = view.findViewById(R.id.radioGroupMilk);
-        radioGroupSugar = view.findViewById(R.id.radioGroupSugar);
+        sugarSeekBar = view.findViewById(R.id.sugarSeekBar);
+        sugarValueTextView = view.findViewById(R.id.sugarValueTextView);
         LogManager.logEvent("PreferencesFragment est cree");
 
-        setupRadioGroupListener(radioGroupCalories);
-        setupRadioGroupListener(radioGroupMilk);
-        setupRadioGroupListener(radioGroupSugar);
+//        setupRadioGroupListener(radioGroupCalories);
+//        setupRadioGroupListener(radioGroupMilk);
+
+        sugarSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                sugarValueTextView.setText(String.valueOf(progress)); // Mettre à jour le TextView avec la valeur actuelle
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {}
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
 
         return view;
     }
@@ -56,8 +75,7 @@ public class PreferencesFragment extends Fragment {
 
     public boolean allRadioGroupsChecked() {
         return radioGroupCalories.getCheckedRadioButtonId() != -1 &&
-                radioGroupMilk.getCheckedRadioButtonId() != -1 &&
-                radioGroupSugar.getCheckedRadioButtonId() != -1;
+                radioGroupMilk.getCheckedRadioButtonId() != -1;
     }
 
     public String getSelectedPreferences() {
@@ -78,11 +96,8 @@ public class PreferencesFragment extends Fragment {
         }
 
         // Obtenir la préférence pour le sucre
-        int selectedSugarId = radioGroupSugar.getCheckedRadioButtonId();
-        if (selectedSugarId != -1) {
-            String selectedSugar = ((TextView) radioGroupSugar.findViewById(selectedSugarId)).getText().toString();
-            selectedPreferences.append(getString(R.string.sugar)).append(getString(R.string.complexity_selected)).append(selectedSugar).append("<br>");
-        }
+        int sugarValue = sugarSeekBar.getProgress(); // Obtenir la valeur actuelle du SeekBar
+        selectedPreferences.append(getString(R.string.sugar)).append(getString(R.string.complexity_selected)).append(sugarValue).append("%<br>");
 
         return selectedPreferences.toString();
     }

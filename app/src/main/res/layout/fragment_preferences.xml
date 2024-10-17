@@ -91,35 +91,19 @@
         android:textStyle="bold"
         android:gravity="center"/>
 
-    <RadioGroup
-        android:id="@+id/radioGroupSugar"
+    <SeekBar
+        android:id="@+id/sugarSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/sugarValueTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="16dp">
-
-        <RadioButton
-            android:id="@+id/radioNoSugar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/no_sugar" />
-
-        <RadioButton
-            android:id="@+id/radio25Sugar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sugar_25" />
-
-        <RadioButton
-            android:id="@+id/radio50Sugar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sugar_50" />
-
-        <RadioButton
-            android:id="@+id/radio75Sugar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sugar_75" />
-    </RadioGroup>
+        android:text="0"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"/>
 </LinearLayout>
