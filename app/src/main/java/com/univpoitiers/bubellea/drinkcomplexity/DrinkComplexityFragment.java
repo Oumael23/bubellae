@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 import com.univpoitiers.bubellea.R;
+import com.univpoitiers.bubellea.log.LogManager;
 
 public class DrinkComplexityFragment extends Fragment {
 
@@ -27,6 +28,9 @@ public class DrinkComplexityFragment extends Fragment {
         radioGroupComplexity = view.findViewById(R.id.radioGroupComplexity);
         radioGroupBoldness = view.findViewById(R.id.radioGroupBoldness);
         radioGroupRecipePreference = view.findViewById(R.id.radioGroupRecipePreference);
+
+        LogManager.logEvent("DrinkComplexityFragment est cree");
+
 
         // Check if all questions are answered
         radioGroupComplexity.setOnCheckedChangeListener((group, checkedId) -> checkAllAnswered());

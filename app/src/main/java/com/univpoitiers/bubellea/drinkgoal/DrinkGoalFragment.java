@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 import com.univpoitiers.bubellea.R;
+import com.univpoitiers.bubellea.log.LogManager;
 
 public class DrinkGoalFragment extends Fragment {
 
@@ -27,6 +28,9 @@ public class DrinkGoalFragment extends Fragment {
         radioGroupGoal = view.findViewById(R.id.radioGroupGoal);
         radioGroupNutrition = view.findViewById(R.id.radioGroupNutrition);
         radioGroupMood = view.findViewById(R.id.radioGroupMood);
+
+        LogManager.logEvent("DrinkGoalFragment est cree");
+
 
         RadioGroup.OnCheckedChangeListener checkAllAnsweredListener = (group, checkedId) -> checkAllAnswered();
         radioGroupGoal.setOnCheckedChangeListener(checkAllAnsweredListener);

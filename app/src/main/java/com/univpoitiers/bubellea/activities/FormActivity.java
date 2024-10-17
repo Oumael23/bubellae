@@ -18,6 +18,7 @@ import com.univpoitiers.bubellea.budget.BudgetPreferenceFragment;
 import com.univpoitiers.bubellea.drinkcomplexity.DrinkComplexityFragment;
 import com.univpoitiers.bubellea.drinkgoal.DrinkGoalFragment;
 import com.univpoitiers.bubellea.fruityflavorpreferences.FruityAndTexturePreferenceFragment;
+import com.univpoitiers.bubellea.log.LogManager;
 import com.univpoitiers.bubellea.sugarpreferences.PreferencesFragment;
 import com.univpoitiers.bubellea.teapreferences.TeaPreferencesFragment;
 import com.univpoitiers.bubellea.texturepreference.CombinedPreferenceFragment;
@@ -53,6 +54,9 @@ public class FormActivity extends AppCompatActivity {
         previousButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                LogManager.logEvent("Utilisateur a cliqué sur le bouton Precedent");
+
                 // Vérifier si on peut revenir en arrière
                 if (viewPager.getCurrentItem() > 0) {
                     viewPager.setCurrentItem(viewPager.getCurrentItem() - 1);
@@ -84,6 +88,8 @@ public class FormActivity extends AppCompatActivity {
 
         // Gestionnaire d'événement pour le bouton Résultat
         buttonResult.setOnClickListener(v -> {
+            LogManager.logEvent("Utilisateur a cliqué sur le bouton Resultat");
+
             if (vibrator != null) {
                 vibrator.vibrate(200);
             }
@@ -95,10 +101,14 @@ public class FormActivity extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                LogManager.logEvent("Utilisateur a cliqué sur le bouton Suivant");
+
                 if (allQuestionsAnswered()) {
                     // Passer au formulaire suivant
                     viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
+
                 } else {
+                    LogManager.logEvent("Utilisateur n'a pas repondu a toutes les questions");
                     // Afficher un Toast si toutes les questions ne sont pas répondues
                     Toast.makeText(FormActivity.this, getString(R.string.toast_all_questions), Toast.LENGTH_SHORT).show();
                 }

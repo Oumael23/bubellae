@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.univpoitiers.bubellea.R;
+import com.univpoitiers.bubellea.log.LogManager;
 
 public class FormObjectiveActivity extends AppCompatActivity {
 
@@ -19,6 +20,9 @@ public class FormObjectiveActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_objective);
+
+        LogManager.logEvent("FormObjectiveActivity est cree");
+
 
         // Récupérer le prénom passé de l'activité précédente
         String firstName = getIntent().getStringExtra("USER_FIRST_NAME");
@@ -42,6 +46,7 @@ public class FormObjectiveActivity extends AppCompatActivity {
         startFormButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                LogManager.logEvent("Utilisateur a cliqué sur le bouton du commerncer le formulaire");
                 Intent intent = new Intent(FormObjectiveActivity.this, FormActivity.class);
                 intent.putExtra("USER_FIRST_NAME", firstName); // Passer le prénom à la prochaine activité
                 startActivity(intent);

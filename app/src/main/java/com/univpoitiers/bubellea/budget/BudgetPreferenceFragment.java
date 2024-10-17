@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 import com.univpoitiers.bubellea.R;
+import com.univpoitiers.bubellea.log.LogManager;
 
 public class BudgetPreferenceFragment extends Fragment {
 
@@ -56,6 +57,9 @@ public class BudgetPreferenceFragment extends Fragment {
         radioGroupBudget.setOnCheckedChangeListener(checkAllAnsweredListener);
         radioGroupFrequency.setOnCheckedChangeListener(checkAllAnsweredListener);
         radioGroupToppingBudget.setOnCheckedChangeListener(checkAllAnsweredListener);
+
+        LogManager.logEvent("BudgetPreferenceFragment est cree");
+
 
         return view;
     }

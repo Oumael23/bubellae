@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.univpoitiers.bubellea.R;
+import com.univpoitiers.bubellea.log.LogManager;
 
 public class TeaPreferencesFragment extends Fragment {
 
@@ -30,6 +31,7 @@ public class TeaPreferencesFragment extends Fragment {
 
         TextView titleTextView = view.findViewById(R.id.titleTextView);
         titleTextView.setText(R.string.tea_preferences_title);
+        LogManager.logEvent("TeaPreferencesFragment est cree");
 
         radioGroupTea = view.findViewById(R.id.radioGroupTea);
         radioGroupIntensity = view.findViewById(R.id.radioGroupIntensity);

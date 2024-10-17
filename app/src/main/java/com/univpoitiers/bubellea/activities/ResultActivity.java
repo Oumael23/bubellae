@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.univpoitiers.bubellea.R;
+import com.univpoitiers.bubellea.log.LogManager;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -45,6 +46,8 @@ public class ResultActivity extends AppCompatActivity {
 
         // Gérer le clic sur le bouton "Quitter"
         buttonQuit.setOnClickListener(v -> {
+            LogManager.logEvent("Utilisateur a cliqué sur le bouton Quitter");
+
             finishAffinity(); // Quitter l'application
         });
 
@@ -69,6 +72,8 @@ public class ResultActivity extends AppCompatActivity {
 
 
     private void saveResultsToFile(String results) {
+        LogManager.logEvent("Utilisateur a cliqué sur le bouton Telecharger le resultat");
+
         if (results == null || results.isEmpty()) {
             Toast.makeText(this, getString(R.string.results_save_error), Toast.LENGTH_SHORT).show();
             return;

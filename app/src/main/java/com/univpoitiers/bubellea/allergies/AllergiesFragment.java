@@ -15,6 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 import com.univpoitiers.bubellea.R;
+import com.univpoitiers.bubellea.log.LogManager;
 
 public class AllergiesFragment extends Fragment {
 
@@ -33,6 +34,9 @@ public class AllergiesFragment extends Fragment {
 
         // Check restrictions radio buttons
         radioGroupRestrictions.setOnCheckedChangeListener((group, checkedId) -> checkAllAnswered());
+
+        LogManager.logEvent("AllergiesFragment est cree");
+
 
         return view;
     }

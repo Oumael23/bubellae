@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 import com.univpoitiers.bubellea.R;
+import com.univpoitiers.bubellea.log.LogManager;
 
 public class CombinedPreferenceFragment extends Fragment {
 
@@ -21,6 +22,7 @@ public class CombinedPreferenceFragment extends Fragment {
     private CheckBox checkGelatinous, checkCrunchy, checkCreamy, checkLiquid;
 
     private RadioGroup radioGroupToppingsQuantity, radioGroupToppingsSweetness;
+
 
     @Nullable
     @Override
@@ -34,6 +36,8 @@ public class CombinedPreferenceFragment extends Fragment {
         checkLiquid = view.findViewById(R.id.checkLiquid);
         radioGroupToppingsQuantity = view.findViewById(R.id.radioGroupToppingsQuantity);
         radioGroupToppingsSweetness = view.findViewById(R.id.radioGroupToppingsSweetness);
+        LogManager.logEvent("CombinedPreferenceFragment est cree");
+
 
         // Set listeners for each RadioGroup
         radioGroupToppingsQuantity.setOnCheckedChangeListener((group, checkedId) -> checkAllAnswered());

@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.univpoitiers.bubellea.R;
+import com.univpoitiers.bubellea.log.LogManager;
 
 public class PreferencesFragment extends Fragment {
 
@@ -33,6 +34,7 @@ public class PreferencesFragment extends Fragment {
         radioGroupCalories = view.findViewById(R.id.radioGroupCalories);
         radioGroupMilk = view.findViewById(R.id.radioGroupMilk);
         radioGroupSugar = view.findViewById(R.id.radioGroupSugar);
+        LogManager.logEvent("PreferencesFragment est cree");
 
         setupRadioGroupListener(radioGroupCalories);
         setupRadioGroupListener(radioGroupMilk);

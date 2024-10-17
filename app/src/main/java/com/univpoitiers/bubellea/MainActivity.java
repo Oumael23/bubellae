@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.univpoitiers.bubellea.activities.FormObjectiveActivity;
+import com.univpoitiers.bubellea.log.LogManager;
 
 import java.util.Locale;
 
@@ -52,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
         languageSwitch = findViewById(R.id.languageSwitch);
         currentLanguageTextView = findViewById(R.id.currentLanguageTextView);
 
+        LogManager.logEvent("Application démarrée");
+
         SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         String savedLanguage = prefs.getString(LANGUAGE_KEY, "fr"); // Défaut : français
         setLocale(savedLanguage);
@@ -59,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         languageSwitch.setChecked(savedLanguage.equals("en"));
 
         languageSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            LogManager.logEvent("Utilisateur a cliqué sur le bouton 'changer la langue'");
             if (isChecked) {
                 setLocale("en"); // Changer en anglais
             } else {
@@ -69,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                LogManager.logEvent("Utilisateur a cliqué sur le bouton 'Continuer'");
                 String firstName = firstNameEditText.getText().toString().trim();
 
                 // Vérifie si le champ est vide
@@ -85,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Bouton "Visiter le menu", ouverture d'une page Web externe
         menuButton.setOnClickListener(view -> {
+            LogManager.logEvent("Utilisateur a cliqué sur le bouton du Menu");
             Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://static.wixstatic.com/media/8103a5_6660cbc6352940ddb9e8e01f03ab2757~mv2.jpg"));
             startActivity(browserIntent);
         });

@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.univpoitiers.bubellea.R;
+import com.univpoitiers.bubellea.log.LogManager;
 
 public class FruityAndTexturePreferenceFragment extends Fragment {
 
@@ -34,6 +35,9 @@ public class FruityAndTexturePreferenceFragment extends Fragment {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(), R.array.fruit_options, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerFruit.setAdapter(adapter);
+
+        LogManager.logEvent("FruityAndTexturePreferenceFragment est cree");
+
 
         // Gérer le choix du fruit dans le spinner
         spinnerFruit.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
