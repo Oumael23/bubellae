@@ -46,9 +46,7 @@ public class AllergiesFragment extends Fragment {
 
     public boolean allAnswersChecked() {
         // Vérifier si la saisie des allergies est faite et si une restriction est sélectionnée
-        boolean isRestrictionSelected = radioGroupRestrictions.getCheckedRadioButtonId() != -1;
-        boolean isAllergiesProvided = !TextUtils.isEmpty(editTextAllergies.getText().toString().trim());
-        return isRestrictionSelected && isAllergiesProvided;
+        return radioGroupRestrictions.getCheckedRadioButtonId() != -1;
     }
 
     public String getSelectedPreferences() {

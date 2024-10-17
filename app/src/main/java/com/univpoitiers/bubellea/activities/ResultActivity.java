@@ -6,6 +6,7 @@ import android.os.Environment;
 import android.text.Html;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,11 +17,14 @@ import com.univpoitiers.bubellea.R;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Random;
 
 public class ResultActivity extends AppCompatActivity {
 
     private TextView resultsTextView;
     private Button buttonQuit;
+    private ImageView resultImageView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +34,7 @@ public class ResultActivity extends AppCompatActivity {
         resultsTextView = findViewById(R.id.resultsTextView);
         Button buttonSave = findViewById(R.id.buttonSave);
         buttonQuit = findViewById(R.id.buttonQuit);
+        resultImageView = findViewById(R.id.resultImageView);
 
         // Récupérer les données passées
         Intent intent = getIntent();
@@ -45,7 +50,23 @@ public class ResultActivity extends AppCompatActivity {
 
         // Gérer le clic sur le bouton de sauvegarde
         buttonSave.setOnClickListener(v -> saveResultsToFile(results));
+
+        setRandomLogo();
+
     }
+
+    private void setRandomLogo() {
+        // Tableau des logos disponibles
+        int[] logos = {R.drawable.tea1, R.drawable.tea2, R.drawable.tea3};
+
+        // Générer un index aléatoire
+        Random random = new Random();
+        int randomIndex = random.nextInt(logos.length);
+
+        // Afficher l'image correspondante dans l'ImageView
+        resultImageView.setImageResource(logos[randomIndex]);
+    }
+
 
     private void saveResultsToFile(String results) {
         if (results == null || results.isEmpty()) {

@@ -3,6 +3,7 @@ package com.univpoitiers.bubellea;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Switch languageSwitch;
     private TextView currentLanguageTextView;
+
 
     private static final String PREFS_NAME = "language_prefs";
     private static final String LANGUAGE_KEY = "selected_language";
@@ -81,25 +83,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Gestionnaire de clic pour le bouton "Visiter notre menu"
-        menuButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                menuImageView.setVisibility(View.VISIBLE);
-                firstNameEditText.setVisibility(View.GONE);
-                continueButton.setVisibility(View.GONE);
-                menuButton.setVisibility(View.GONE);
-                languageSwitch.setVisibility(View.GONE);
-                logoImageView.setVisibility(View.GONE);
-                currentLanguageTextView.setVisibility(View.GONE);
-                // URL de l'image
-                String imageUrl = "https://postimg.cc/vczCptHM";
-
-                // Charger l'image depuis Internet avec Glide
-                Glide.with(MainActivity.this)
-                        .load(imageUrl)
-                        .into(menuImageView);
-            }
+        // Bouton "Visiter le menu", ouverture d'une page Web externe
+        menuButton.setOnClickListener(view -> {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://static.wixstatic.com/media/8103a5_6660cbc6352940ddb9e8e01f03ab2757~mv2.jpg"));
+            startActivity(browserIntent);
         });
     }
 

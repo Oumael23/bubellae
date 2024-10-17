@@ -2,6 +2,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/tea_preferences"
     android:padding="16dp"
     android:background="@color/background_color"
     android:gravity="center_horizontal">
