@@ -79,6 +79,9 @@ public class ResultActivity extends AppCompatActivity {
             return;
         }
 
+        results = results.replaceAll("<br>", "\n").replaceAll("<b>", "").replaceAll("</b>", "");
+
+
         try {
             // Obtenir le chemin du dossier Download
             File downloadDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
